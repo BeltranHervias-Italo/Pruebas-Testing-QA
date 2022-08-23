@@ -1,6 +1,6 @@
 ///<reference types="Cypress" />
 
-describe('Prueba con Cypress Orange HRM',function(){
+describe('Prueba con Cypress Orange HRM',function(){ //Este es un nuevo comentario
 
     beforeEach(function(){
         cy.fixture('OrangeHRM.json').then(function(datos){
