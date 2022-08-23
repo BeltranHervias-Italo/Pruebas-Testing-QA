@@ -1,0 +1,64 @@
+{
+  "id": "4154ad3a-80fd-4c47-922c-4b990f0f82fa",
+  "version": "2.0",
+  "name": "Test Buggy Cars",
+  "url": "https://buggy.justtestit.org",
+  "tests": [{
+    "id": "ec27801f-e884-4a04-a4d5-9867fbaa7eee",
+    "name": "Validacion Pagina de Inicio",
+    "commands": [{
+      "id": "b6243b1e-7955-4105-84ba-d54f8027f87f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60d56eda-403e-41a3-9fdb-073f38218a63",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "656x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5baee235-f92b-4015-8c2f-9590aa30c7b9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col-md-4:nth-child(1) .card-header",
+      "targets": [
+        ["css=.col-md-4:nth-child(1) .card-header", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Popular Make')]", "xpath:innerText"]
+      ],
+      "value": "Popular Make"
+    }, {
+      "id": "46193e83-25c0-4d0e-bd7a-90453c50932e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col-md-4:nth-child(2) .card-header",
+      "targets": [],
+      "value": "Popular Model"
+    }, {
+      "id": "18d3c6f9-cf55-45b3-a39b-43d5e3afc302",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-md-4:nth-child(3) .card-header",
+      "targets": [
+        ["css=.col-md-4:nth-child(3) .card-header", "css:finder"],
+        ["xpath=//div[3]/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Overall Rating')]", "xpath:innerText"]
+      ],
+      "value": "Overall Rating"
+    }]
+  }],
+  "suites": [{
+    "id": "5ea40ed1-18c4-42cd-96df-edaa8d1a33f8",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ec27801f-e884-4a04-a4d5-9867fbaa7eee"]
+  }],
+  "urls": ["https://buggy.justtestit.org/"],
+  "plugins": []
+}
